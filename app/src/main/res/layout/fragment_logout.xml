@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     tools:context="com.example.android.myshoestore.LogoutFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.android.myshoestore.LogInViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/logOutConstraintLayout"

@@ -21,6 +21,8 @@ class LogInViewModel:ViewModel() {
     fun logIn(userName: String, password: String){
          if((_userName == userName) && (password == _password))
              _isLoggedIn.setValue(true)
+        else
+            _isLoggedIn.setValue(false)
     }
 
     fun register(userName:String,password:String)
@@ -28,5 +30,10 @@ class LogInViewModel:ViewModel() {
         _userName = userName
         _password = password
         _isLoggedIn.setValue(true)
+    }
+
+    fun logOut()
+    {
+        _isLoggedIn.setValue(false)
     }
 }

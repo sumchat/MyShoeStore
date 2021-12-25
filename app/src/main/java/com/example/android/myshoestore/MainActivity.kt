@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -19,6 +20,7 @@ import com.google.android.material.navigation.NavigationView
     class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
+    // lateinit var viewModel:LogInViewModel
 
      lateinit var appBarConfiguration: AppBarConfiguration
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,26 +30,21 @@ import com.google.android.material.navigation.NavigationView
 
         drawerLayout = binding.drawerLayout
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
-       /* toolbar.visibility = View.GONE
-
-        if (destination.id == R.id.loginFragment) {
-            toolbar.visibility = View.GONE
-        } else {
-            toolbar.visibility = View.VISIBLE
-        }*/
+        //viewModel = ViewModelProvider(this).get(LogInViewModel::class.java)
 
         val navController = this.findNavController(R.id.myNavHostFragment)
        // val toolbar = this.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
 
-            if (destination.id == R.id.loginFragment) {
-                drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+            if (destination.id == R.id.welcomeFragment) {
+                drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+
                 //DRAWER LOCKED IN fragment1
                // toolbar.visibility = View.GONE
 
             } else {
-                drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+                drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
                 //DRAWER UNLOCKED IN fragment2
               //  toolbar.visibility = View.VISIBLE
 

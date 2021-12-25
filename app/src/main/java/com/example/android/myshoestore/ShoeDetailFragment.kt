@@ -83,7 +83,7 @@ class ShoeDetailFragment : Fragment() {
             }
         }
 
-        //val removeFlowerButton: Button = //findViewById(R.id.remove_button)
+
         shoeId?.let{
             var currentShoe = shoeDetailViewModel.getShoeForId(shoeId)
             shoeName.text = currentShoe?.name

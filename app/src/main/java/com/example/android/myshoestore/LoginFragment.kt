@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.android.myshoestore.databinding.FragmentLoginBinding
 import android.util.Log
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 
 
@@ -25,6 +26,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var viewModel:LogInViewModel
     private lateinit var binding: FragmentLoginBinding
+    private val sharedviewModel: LogInViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,19 +50,32 @@ class LoginFragment : Fragment() {
 
         binding.registerbutton.setOnClickListener { v:View -> register() }
 
+
        // binding.loginbutton.setOnClickListener {v: View -> v.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())}
 
        // binding.loginbutton.setOnClickListener { logIn()}
 
+       // viewModel = ViewModelProvider(this).get(LogInViewModel::class.java)
+        val activity = this.activity as MainActivity?
+       /* if (activity != null) {
+            viewModel = activity.viewModel
+        }*/
+         viewModel = sharedviewModel
 
-        viewModel = ViewModelProvider(this).get(LogInViewModel::class.java)
+      //  viewModel = ViewModelProvider(requireActivity()).get(LogInViewModel::class.java)
+       // viewModel = ViewModelProvider(requireActivity()).get(LogInViewModel::class.java)
 
-        viewModel.isLoggedIn.observe(viewLifecycleOwner,Observer{loggedin ->
-            if(loggedin){
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+            viewModel.isLoggedIn.observe(viewLifecycleOwner, Observer { loggedin ->
+                if (loggedin) {
+                    findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
 
-            }
-        })
+
+                } else {
+                    var wrongusername = binding.textView7
+                    wrongusername.visibility = View.VISIBLE
+                }
+            })
+
        /* val activity = this.activity as MainActivity?
 
         if (activity != null) {
@@ -69,14 +84,31 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
-    fun logIn() {
-        var _userName:Editable = binding.editTextTextPersonName2.text
-        var _password:Editable = binding.editTextTextPassword2.text
-        if(_userName.toString() !== "" && _password.toString() !== "") {
+    private fun Validate(): Boolean {
+        if (binding.editTextTextPersonName2.text.isEmpty()) return false
+        if (binding.editTextTextPassword2.text.isEmpty()) return false
+        return true
 
-            viewModel.logIn(_userName.toString(), _password.toString())
-            if(viewModel.isLoggedIn.value == true)
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+    }
+
+    fun logIn() {
+        var _userName = binding.editTextTextPersonName2
+        var _password = binding.editTextTextPassword2
+        var wrongusername = binding.textView9
+
+       // _userName.text.isNotEmpty().apply{
+        if(Validate()){
+
+
+
+
+              viewModel.logIn(_userName.text.toString(), _password.text.toString())
+
+
+        }
+        else {
+            var wrongusername = binding.textView7
+            wrongusername.visibility = View.VISIBLE
         }
 
     }
@@ -84,12 +116,19 @@ class LoginFragment : Fragment() {
     fun register() {
         var _userName:Editable = binding.editTextTextPersonName2.text
         var _password:Editable = binding.editTextTextPassword2.text
-        if(_userName.toString() !== "" && _password.toString() !== "") {
-            Log.i("login",_password.toString())
 
-            viewModel.register(_userName.toString(), _password.toString())
+        if(Validate()){
+
+
+
+                viewModel.register(_userName.toString(), _password.toString())
+
            // if(viewModel.isLoggedIn.value == true)
            //     findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+        }
+        else {
+            var wrongusername = binding.textView7
+            wrongusername.visibility = View.VISIBLE
         }
 
     }

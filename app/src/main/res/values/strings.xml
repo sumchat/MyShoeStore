@@ -36,6 +36,7 @@
     <string name="size">Size</string>
     <string name="logoutmenu">Log out</string>
     <string name="editname">Name of the shoe</string>
+    <string name="wrongusername">Wrong Username or Password</string>
     <string name="loggedout">You are logged out!!</string>
     <string-array name="Size">
         <item>10</item>

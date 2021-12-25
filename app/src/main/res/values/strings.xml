@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">MyShoeStore</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcometitle">"AMERICA'S EMINENT FOOTWEAR EXPORTER "</string>
+    <string name="welcomefocus">"A global player with a strong focus to quality  "</string>
+    <string name="maptitle">"Location of Shoe stores  "</string>
+    <string name="mapinstruction">"Learn which shoes are right for you  "</string>
+    <string name="shoelist">"Shoe List  "</string>
+    <string name="adddetail">"Add"</string>
+    <string name="shoe1_name">shoe1</string>
+    <string name="shoe1_desc">"child shoe "</string>
+    <string name="shoe2_name">Shoe 2</string>
+    <string name="shoe2_desc">Running Shoe</string>
+    <string name="shoe3_name">Shoe3</string>
+    <string name="shoe3_desc">Walking Shoe</string>
+    <string name="shoe4_name">Shoe 4</string>
+    <string name="shoe4_desc">Trekking Shoe</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="shoe_name">snicker</string>
+    <string name="company">Company</string>
+    <string name="company_name">Company X</string>
+    <string name="companydescription">Description</string>
+    <string name="description">Description</string>
+    <string name="size">Size</string>
+    <string name="logoutmenu">Log out</string>
+    <string name="editname">Name of the shoe</string>
+    <string name="loggedout">You are logged out!!</string>
+    <string-array name="Size">
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+</resources>

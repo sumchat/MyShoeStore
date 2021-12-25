@@ -10,7 +10,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">This app is a shoe store app</string>
     <string name="welcometitle">"AMERICA'S EMINENT FOOTWEAR EXPORTER "</string>
     <string name="welcomefocus">"A global player with a strong focus to quality  "</string>
     <string name="maptitle">"Location of Shoe stores  "</string>

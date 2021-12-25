@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th-v29\\values-th-v29.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\sum_c\\.gradle\\caches\\transforms-3\\c38a3e54db2fc37184901073be54ad5d\\transformed\\jetified-arcgis-android-100.13.0\\res\\values-th-v29\\values-th-v29.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "316",
+                        "endOffsets": "367"
+                    }
+                }
+            ]
+        }
+    ]
+}

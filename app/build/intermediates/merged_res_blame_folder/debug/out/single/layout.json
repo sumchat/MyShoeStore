@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_instruction.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\fragment_instruction.xml"
+    },
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_shoe_list.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\fragment_my_shoe_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_shoe_detail.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\fragment_shoe_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_logout.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\fragment_logout.xml"
+    },
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\shoe_item.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\shoe_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_welcome.xml",
+        "source": "C:\\Users\\sum_c\\AndroidStudioProjects\\MyShoeStore\\app\\src\\main\\res\\layout\\fragment_welcome.xml"
+    }
+]

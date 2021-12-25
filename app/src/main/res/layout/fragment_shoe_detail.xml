@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShoeDetailFragment">-->
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ShoeDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/shoe_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+
+            android:layout_margin="16dp"
+            app:srcCompat="@mipmap/shoeicon" />
+
+        <TextView
+            android:id="@+id/shoeNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:padding="16dp"
+            android:text="@string/name"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/shoeNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="clip_horizontal|center_horizontal"
+            android:layout_margin="1dp"
+            android:hint="@string/editname" />
+
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:padding="16dp"
+            android:text="@string/company"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextCompanyName"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="1dp"
+            android:ems="10"
+            android:hint="@string/company_name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:padding="16dp"
+            android:text="@string/companydescription"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextMultiLineDescription"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="@string/description"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/textViewSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:text="@string/size"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sizespinner"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_margin="5dp" />
+
+        <Button
+            android:id="@+id/savebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/cancelbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+
+
+    </LinearLayout>
+</layout>

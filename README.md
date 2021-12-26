@@ -1,5 +1,5 @@
 # MyShoeStore
- This app is my first Android application with Kotlin where I built a multiscreen Android application and implemented a navigation file to take the user through the app. I also used the ArcGIS Runtime API for Android to add a webmap to it. The app is building with four screens:
+ This app is my first Android application with Kotlin where I built a multiscreen Android application and implemented a navigation file to take the user through the app. I also used the ArcGIS Runtime API for Android to add a webmap to it. I took help from https://developer.android.com/codelabs to explore the best way to handle the data store for the shoe List.  The app is building with four screens:
 
 Login  
 Welcome  

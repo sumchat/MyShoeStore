@@ -18,7 +18,10 @@ import com.esri.arcgisruntime.ArcGISRuntimeEnvironment
 import com.esri.arcgisruntime.mapping.ArcGISMap
 import com.esri.arcgisruntime.mapping.BasemapStyle
 import com.esri.arcgisruntime.mapping.Viewpoint
+import com.esri.arcgisruntime.mapping.view.LocationDisplay
 import com.esri.arcgisruntime.mapping.view.MapView
+import com.esri.arcgisruntime.portal.Portal
+import com.esri.arcgisruntime.portal.PortalItem
 import com.example.android.myshoestore.databinding.FragmentInstructionBinding
 
 //import com.example.android.myshoestore.databinding
@@ -34,6 +37,7 @@ import com.example.android.myshoestore.databinding.FragmentInstructionBinding
 class InstructionFragment : Fragment() {
     // TODO: Rename and change types of parameters
     //private lateinit var binding:FragmentInstructionBinding
+   // private val locationDisplay: LocationDisplay by lazy { mapView.locationDisplay }
 
 
     private val activityMainBinding by lazy {
@@ -70,13 +74,23 @@ class InstructionFragment : Fragment() {
     private fun setupMap() {
 
         // create a map with the BasemapStyle streets
-        val map = ArcGISMap(BasemapStyle.ARCGIS_TOPOGRAPHIC)
+        //val map = ArcGISMap(BasemapStyle.ARCGIS_TOPOGRAPHIC)
 
         // set the map to be displayed in the layout's MapView
+       // mapView.map = map
+//
+        val portal = Portal("https://www.arcgis.com", false)
+
+        val itemId = "4ab2c027c1a14ca0b67ede51c7bcf606"
+        val portalItem = PortalItem(portal, itemId)
+        val map = ArcGISMap(portalItem)
+
         mapView.map = map
 
         // set the viewpoint, Viewpoint(latitude, longitude, scale)
-        mapView.setViewpoint(Viewpoint(34.0270, -118.8050, 72000.0))
+            //  mapView.setViewpoint(Viewpoint(34.0270, -118.8050, 72000.0))
+
+
 
     }
 

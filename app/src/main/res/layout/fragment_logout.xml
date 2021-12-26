@@ -6,7 +6,7 @@
     tools:context="com.example.android.myshoestore.LogoutFragment">
     <data>
         <variable
-            name="viewModel"
+            name="loginviewModel"
             type="com.example.android.myshoestore.LogInViewModel" />
     </data>
 

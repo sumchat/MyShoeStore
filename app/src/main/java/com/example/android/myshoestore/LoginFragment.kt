@@ -44,7 +44,7 @@ class LoginFragment : Fragment() {
       //  binding.loginbutton.setOnClickListener {v: View -> v.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())}
 
          binding = DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false)
-
+        // binding.loginviewModel = viewModel
         //binding.loginbutton.setOnClickListener { v:View-> v.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())  }
         binding.loginbutton.setOnClickListener { v:View-> logIn()  }
 

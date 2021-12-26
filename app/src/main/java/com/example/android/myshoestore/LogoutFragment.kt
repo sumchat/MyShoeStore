@@ -32,6 +32,7 @@ class LogoutFragment : Fragment() {
 
          binding = DataBindingUtil.inflate(inflater, R.layout.fragment_logout, container, false)
         viewModel = sharedviewModel
+        binding.loginviewModel = viewModel
         binding.logmeout.setOnClickListener { v:View->
             viewModel.logOut()
             v.findNavController().navigate(LogoutFragmentDirections.actionLogoutFragmentToLoginFragment())

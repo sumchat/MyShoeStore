@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
@@ -20,6 +21,7 @@ import com.google.android.material.navigation.NavigationView
     class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var  actionBar: ActionBar
     // lateinit var viewModel:LogInViewModel
 
      lateinit var appBarConfiguration: AppBarConfiguration
@@ -34,8 +36,21 @@ import com.google.android.material.navigation.NavigationView
 
         val navController = this.findNavController(R.id.myNavHostFragment)
        // val toolbar = this.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-
+        actionBar = supportActionBar!!
         navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (actionBar != null) {
+                if (destination.id == R.id.loginFragment) {
+                    //  val actionBar: ActionBar? = supportActionBar
+
+                    actionBar.hide()
+
+                    // setSystemUIVisibility = View.Syste
+                    // View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                } else {
+                    actionBar.show()
+                }
+            }
+
 
             if (destination.id == R.id.welcomeFragment) {
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)

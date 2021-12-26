@@ -9,6 +9,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".ShoeDetailFragment">
+    <data>
+        <variable
+            name="currentShoe"
+            type="com.example.android.myshoestore.data.Shoe" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +44,8 @@
             android:layout_height="70dp"
             android:layout_gravity="clip_horizontal|center_horizontal"
             android:layout_margin="1dp"
+            android:text="@{currentShoe.name}"
+
             android:hint="@string/editname" />
 
         <TextView
@@ -57,6 +64,8 @@
             android:layout_margin="1dp"
             android:ems="10"
             android:hint="@string/company_name"
+            android:text="@{currentShoe.companyName}"
+
             android:inputType="textPersonName" />
 
         <TextView
@@ -76,6 +85,8 @@
             android:ems="10"
             android:gravity="left"
             android:hint="@string/description"
+            android:text="@{currentShoe.description}"
+
             android:inputType="textMultiLine" />
 
         <TextView

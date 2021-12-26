@@ -62,10 +62,11 @@ class ShoeDetailFragment : Fragment() {
         }*/
 
         /* Connect variables to UI elements. */
-        val shoeName: TextView = binding.shoeNameEdit//findViewById(R.id.shoeNameEdit)
-        val companyName:TextView = binding.editTextCompanyName
+        //val shoeName: TextView = binding.shoeNameEdit//findViewById(R.id.shoeNameEdit)
+        //val companyName:TextView = binding.editTextCompanyName
         val shoeImage: ImageView = binding.shoeImage//findViewById(R.id.flower_detail_image)
-        val shoeDescription: TextView = binding.editTextMultiLineDescription//findViewById(R.id.flower_detail_description)
+       // val shoeDescription: TextView = binding.editTextMultiLineDescription//findViewById(R.id.flower_detail_description)
+
         var shoeSize = 10
 
         spinner.onItemSelectedListener = object:AdapterView.OnItemSelectedListener{
@@ -86,9 +87,10 @@ class ShoeDetailFragment : Fragment() {
 
         shoeId?.let{
             var currentShoe = shoeDetailViewModel.getShoeForId(shoeId)
-            shoeName.text = currentShoe?.name
-            companyName.text = currentShoe?.companyName
-            shoeDescription.text = currentShoe?.description
+            binding.currentShoe = currentShoe
+           // shoeName.text = currentShoe?.name
+           // companyName.text = currentShoe?.companyName
+           // shoeDescription.text = currentShoe?.description
             val spinnerPosition = adapter.getPosition(currentShoe?.size.toString())
             spinner.setSelection(spinnerPosition)
             if(currentShoe?.image == null)

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -15,11 +16,14 @@ import com.example.android.myshoestore.data.Shoe
 const val SHOE_ID = "shoe id"
 class MyShoeListFragment : Fragment() {
     lateinit var thiscontext: Context
+    private lateinit var viewModel:LogInViewModel
   //  lateinit var shoes: List<Shoe>
 
    // private lateinit var viewModel: ShoeListViewModel
     //private lateinit var viewModelFactory: ShoeListViewModelFactory
     private lateinit var viewOfLayout: View
+
+    private val sharedviewModel: LogInViewModel by activityViewModels()
 
     /* Opens FlowerDetailActivity when RecyclerView item is clicked. */
     private fun adapterOnClick(shoe: Shoe) {
@@ -53,6 +57,9 @@ class MyShoeListFragment : Fragment() {
             thiscontext = container.getContext()
         }
         viewOfLayout = inflater.inflate(R.layout.fragment_my_shoe_list, container, false)
+
+        viewModel = sharedviewModel
+
         val _shoeAdapter = ShoeAdapter{ shoe -> adapterOnClick(shoe)}
         val recyclerView: RecyclerView = viewOfLayout.findViewById(R.id.recycler_view)//findViewById(R.id.recycler_view)
         recyclerView.adapter = _shoeAdapter
@@ -84,6 +91,7 @@ class MyShoeListFragment : Fragment() {
         inflater.inflate(R.menu.overflow_menu,menu)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        viewModel.logOut()
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
     }

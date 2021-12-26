@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LoginFragment">
-    <data>
+   <!-- <data>
         <variable
-            name="viewModel"
+            name="loginviewModel"
             type="com.example.android.myshoestore.LogInViewModel" />
-    </data>
+    </data>-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/loginConstraintLayout"
@@ -59,7 +59,8 @@
                 android:layout_weight="1"
                 android:text="UserName"
                 android:textAlignment="center"
-                android:textColor="#F4F3EE" />
+                android:textColor="#F4F3EE"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName2"
@@ -91,7 +92,8 @@
                 android:layout_weight="1"
                 android:text="Password"
                 android:textAlignment="center"
-                android:textColor="#FAF6F6" />
+                android:textColor="#FAF6F6"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextTextPassword2"
@@ -112,6 +114,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="LogIn"
+
             app:layout_constraintBottom_toTopOf="@+id/registerbutton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

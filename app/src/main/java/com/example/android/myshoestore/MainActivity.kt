@@ -56,12 +56,12 @@ import com.google.android.material.navigation.NavigationView
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
 
                 //DRAWER LOCKED IN fragment1
-               // toolbar.visibility = View.GONE
+
 
             } else {
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
                 //DRAWER UNLOCKED IN fragment2
-              //  toolbar.visibility = View.VISIBLE
+
 
             }
         }
